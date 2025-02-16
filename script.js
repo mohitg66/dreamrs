@@ -7,67 +7,67 @@ document.addEventListener("DOMContentLoaded", function () {
       },
         {
             avatar: "images/PS1.png",
-            name: "Martiana Dialan",
+            name: "Debadatta Sethy",
             title: "PhD Student"
         },
         {
             avatar: "images/PS2.png",
-            name: "Micheal Colorand",
+            name: "Rhea S Shrivastava",
             title: "PhD Student"
         },
         {
             avatar: "images/s1.png",
-            name: "Brown Luis",
+            name: "Arbaaz Choudhari",
             title: "B.Tech Student"
         },
         {
           avatar: "images/s2.png",
-            name: "Lysa Sandiago",
+            name: "Yashila Arora",
             title: "B.Tech Student"
         },
         {
             avatar: "images/s3.png",
-            name: "Daniel Martin",
+            name: "Kanishk Kukreja",
             title: "B.Tech Student"
         },
         {
             avatar: "images/s4.png",
-            name: "Vicky Tanson",
+            name: "Vishesh Sah",
             title: "B.Tech Student"
         },
         {
             avatar: "images/s5.png",
-            name: "Martiana Dialan",
+            name: "Hardik Singh",
             title: "B.Tech Student"
         },
         {
             avatar: "images/s6.png",
-            name: "Micheal Colorand",
+            name: "Pratham Kumar",
             title: "B.Tech Student"
         },
         {
             avatar: "images/s7.png",
-            name: "Brown Luis",
+            name: "Vipul Raj",
             title: "B.Tech Student"
         },
         {
           avatar: "images/s8.png",
-          name: "Brown Luis",
+          name: "Aman Sharma",
           title: "B.Tech Student"
       },
       {
         avatar: "images/s9.png",
-        name: "Brown Luis",
+        name: "Mayank Kaim",
         title: "B.Tech Student"
       },
       {
         avatar: "images/s10.png",
-        name: "Brown Luis",
+        name: "Neev Swarnakar",
         title: "B.Tech Student"
       },
       {
         avatar: "images/s11.png",
-        name: "Brown Luis",
+        name: "Jacqueline P Razafimiadana",
         title: "B.Tech Student"
       },
     ];

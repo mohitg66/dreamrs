@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             avatar: "images/PS1.png",
             name: "Debadatta Sethy",
-            title: "PhD Student"
+            title: "PhD Scholar",
+            subtitle: "(shared with Dr. Pragma Kar)"
         },
         {
             avatar: "images/PS2.png",
             name: "Rhea S Shrivastava",
-            title: "PhD Student"
+            title: "PhD Scholar"
         },
         {
             avatar: "images/s1.png",
@@ -85,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="mt-3 text-center">
                     <h4 class="text-lg text-gray-700 font-semibold">${member.name}</h4>
                     <p class="text-gray-500">${member.title}</p>
+                    ${member.subtitle ? `<p class="text-gray-500 text-sm mt-1">${member.subtitle}</p>` : ''}
                     <div class="mt-2 flex gap-4 text-gray-400 items-center justify-center">
                         <a href="item.github" aria-label="GitHub">
                           <svg

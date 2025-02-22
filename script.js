@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 const headerHTML = `
-<header class="fixed w-full bg-gradient-to-b from-gray-400 to-transparent dark:from-gray-800 top-0 z-20 px-6 lg:px-44">
+<header class="fixed w-full bg-gradient-to-b from-gray-400 to-transparent dark:from-gray-700 top-0 z-20 px-6 lg:px-44">
     <div class="container mx-auto py-4 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
@@ -15,15 +15,15 @@ const headerHTML = `
         </div>
         <!-- Navbar -->
         <nav class="flex gap-x-6 relative text-lg drop-shadow-[0_0px_12px_rgba(255,255,255,0.4)]">
-            <a href="index.html" class="text-gray-700 dark:text-white hover:text-fuchsia-600">Home</a>
-            <a href="research.html" class="text-gray-700 dark:text-white hover:text-fuchsia-600">Research</a>
-            <a href="teaching.html" class="text-gray-700 dark:text-white hover:text-fuchsia-600">Teaching</a>
+            <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Home</a>
+            <a href="research.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
+            <a href="teaching.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
             <!-- Dropdown for People -->
             <div class="group inline-block relative">
-                <a href="team.html" class="text-gray-700 dark:text-white hover:text-fuchsia-600">People</a>
+                <a href="team.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">People</a>
                 <div class="absolute hidden group-hover:block shadow pt-4 pb-2 rounded-b w-max z-10">
-                    <a href="pi.html" class="block pl-4 pr-8 py-2 text-gray-700 dark:text-white hover:text-fuchsia-600">Principal Investigator</a>
-                    <a href="team.html" class="block pl-4 pr-8 py-2 text-gray-700 dark:text-white hover:text-fuchsia-600">Team</a>
+                    <a href="pi.html" class="block pl-4 pr-8 py-2 text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
+                    <a href="team.html" class="block pl-4 pr-8 py-2 text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
                 </div>
             </div>
         </nav>
@@ -32,7 +32,7 @@ const headerHTML = `
 `;
 
 const footerHTML = `
-<footer class="bg-gray-800 text-white py-8">
+<footer class="bg-gray-900 dark:border-t dark:border-gray-700 text-white py-8">
     <div class="container mx-auto px-6 lg:px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Name of the Lab -->

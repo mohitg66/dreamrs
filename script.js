@@ -1,140 +1,415 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const team = [
-        {
-          avatar: "images/prof.png",
-          name: "Dr Sonal Keshwani",
-          title: "Principal Investigator"
-      },
-        {
-            avatar: "images/PS1.png",
-            name: "Debadatta Sethy",
-            title: "PhD Scholar",
-            subtitle: "(shared with Dr. Pragma Kar)"
-        },
-        {
-            avatar: "images/PS2.png",
-            name: "Rhea S Shrivastava",
-            title: "PhD Scholar"
-        },
-        {
-            avatar: "images/s1.png",
-            name: "Arbaaz Choudhari",
-            title: "B.Tech Student"
-        },
-        {
-          avatar: "images/s2.png",
-            name: "Yashila Arora",
-            title: "B.Tech Student"
-        },
-        {
-            avatar: "images/s3.png",
-            name: "Kanishk Kukreja",
-            title: "B.Tech Student"
-        },
-        {
-            avatar: "images/s4.png",
-            name: "Vishesh Sah",
-            title: "B.Tech Student"
-        },
-        {
-            avatar: "images/s5.png",
-            name: "Hardik Singh",
-            title: "B.Tech Student"
-        },
-        {
-            avatar: "images/s6.png",
-            name: "Pratham Kumar",
-            title: "B.Tech Student"
-        },
-        {
-            avatar: "images/s7.png",
-            name: "Vipul Raj",
-            title: "B.Tech Student"
-        },
-        {
-          avatar: "images/s8.png",
-          name: "Aman Sharma",
-          title: "B.Tech Student"
-      },
-      {
-        avatar: "images/s9.png",
-        name: "Mayank Kaim",
-        title: "B.Tech Student"
-      },
-      {
-        avatar: "images/s10.png",
-        name: "Neev Swarnakar",
-        title: "B.Tech Student"
-      },
-      {
-        avatar: "images/s11.png",
-        name: "Jacqueline P Razafimiadana",
-        title: "B.Tech Student"
-      },
-    ];
+document.addEventListener('DOMContentLoaded', function() {
 
-    const teamContainer = document.getElementById("team-container");
+// Header and Footer
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    team.forEach(member => {
-        const listItem = document.createElement("li");
-
-        listItem.innerHTML = `
-            <div class="hover:cursor-default">
-                <div class="w-60 h-60 shadow rounded-xl">
-                    <img src="${member.avatar}" class="w-full h-full object-cover object-center shadow-md rounded-xl" alt="${member.name}" />
-                </div>
-                <div class="mt-3 text-center">
-                    <h4 class="text-lg text-gray-700 font-semibold">${member.name}</h4>
-                    <p class="text-gray-500">${member.title}</p>
-                    ${member.subtitle ? `<p class="text-gray-500 text-sm mt-1">${member.subtitle}</p>` : ''}
-                    <div class="mt-2 flex gap-4 text-gray-400 items-center justify-center">
-                        <a href="item.github" aria-label="GitHub">
-                          <svg
-                            class="w-5 h-5 duration-150 hover:text-gray-500"
-                            fill="currentColor"
-                            viewBox="0 0 48 48"
-                          >
-                            <g fill="currentColor" clip-path="url(#clip0_910_44)">
-                              <path
-                                fill-rule="evenodd"
-                                d="M24 1A24.086 24.086 0 008.454 6.693 23.834 23.834 0 00.319 21.044a23.754 23.754 0 003.153 16.172 23.98 23.98 0 0012.938 10.29c1.192.221 1.641-.518 1.641-1.146 0-.628-.024-2.45-.032-4.442-6.676 1.443-8.087-2.817-8.087-2.817-1.089-2.766-2.663-3.493-2.663-3.493-2.178-1.478.163-1.45.163-1.45 2.413.17 3.68 2.461 3.68 2.461 2.138 3.648 5.616 2.593 6.983 1.976.215-1.545.838-2.596 1.526-3.193-5.333-.6-10.937-2.647-10.937-11.791a9.213 9.213 0 012.472-6.406c-.246-.6-1.069-3.026.234-6.322 0 0 2.015-.64 6.602 2.446a22.904 22.904 0 0112.017 0c4.583-3.086 6.594-2.446 6.594-2.446 1.307 3.288.484 5.714.238 6.322a9.194 9.194 0 012.476 6.414c0 9.163-5.615 11.183-10.957 11.772.859.742 1.626 2.193 1.626 4.421 0 3.193-.028 5.762-.028 6.548 0 .636.433 1.38 1.65 1.146a23.98 23.98 0 0012.938-10.291 23.754 23.754 0 003.151-16.175A23.834 23.834 0 0039.56 6.69 24.086 24.086 0 0024.009 1H24z"
-                                clip-rule="evenodd"
-                              />
-                              <path
-                                d="M9.089 35.264c-.052.119-.243.154-.398.071-.155-.083-.27-.237-.214-.36.056-.122.242-.154.397-.07.155.082.274.24.215.359zM10.063 36.343a.4.4 0 01-.493-.11c-.155-.167-.187-.396-.068-.499.12-.102.334-.055.489.11.155.167.19.396.072.499zM11.008 37.714c-.147.103-.397 0-.536-.206a.395.395 0 010-.569c.147-.098.397 0 .537.202.139.202.143.47 0 .573zM12.292 39.042c-.131.146-.397.106-.616-.091-.219-.198-.27-.467-.139-.609.131-.142.397-.102.624.091.226.194.27.466.131.609zM14.092 39.816c-.06.186-.33.269-.6.19-.27-.08-.449-.3-.397-.49.051-.19.326-.277.6-.19.274.087.449.297.397.49zM16.056 39.95c0 .194-.223.36-.509.364-.286.004-.52-.154-.52-.348 0-.193.222-.36.508-.363.286-.004.52.15.52.347zM17.884 39.646c.036.194-.163.395-.45.443-.285.047-.536-.067-.572-.257-.035-.19.171-.395.45-.447.278-.05.536.068.572.261z"
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_910_44">
-                                <path fill="currentColor" d="M0 0h48v48H0z" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </a>
-                        <a href="item.linkedin" aria-label="LinkedIn">
-                          <svg
-                            class="w-5 h-5 duration-150 hover:text-gray-500"
-                            fill="none"
-                            viewBox="0 0 48 48"
-                          >
-                            <g clip-path="url(#clip0_17_68)">
-                              <path
-                                fill="currentColor"
-                                d="M44.447 0H3.544C1.584 0 0 1.547 0 3.46V44.53C0 46.444 1.584 48 3.544 48h40.903C46.407 48 48 46.444 48 44.54V3.46C48 1.546 46.406 0 44.447 0zM14.24 40.903H7.116V17.991h7.125v22.912zM10.678 14.87a4.127 4.127 0 01-4.134-4.125 4.127 4.127 0 014.134-4.125 4.125 4.125 0 010 8.25zm30.225 26.034h-7.115V29.766c0-2.653-.047-6.075-3.704-6.075-3.703 0-4.265 2.896-4.265 5.887v11.325h-7.107V17.991h6.826v3.13h.093c.947-1.8 3.272-3.702 6.731-3.702 7.21 0 8.541 4.744 8.541 10.912v12.572z"
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_17_68">
-                                <path fill="currentColor" d="M0 0h48v48H0z" />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </a>
-                    </div>
+const headerHTML = `
+<header class="fixed w-full bg-gradient-to-b from-gray-400 to-transparent top-0 z-20 px-6 lg:px-44">
+    <div class="container mx-auto py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+        <a href="index.html">
+            <img src="logo.png" alt="DREAMRS Lab Logo" class="h-14">
+            <!-- <span class="text-xl font-bold text-gray-900">DREAMRS Lab</span> -->
+        </a>
+        </div>
+        <!-- Navbar -->
+        <nav class="flex gap-x-6 relative text-lg drop-shadow-[0_0px_12px_rgba(255,255,255,0.4)]">
+            <a href="index.html" class="text-gray-700 hover:text-fuchsia-600">Home</a>
+            <a href="research.html" class="text-gray-700 hover:text-fuchsia-600">Research</a>
+            <a href="teaching.html" class="text-gray-700 hover:text-fuchsia-600">Teaching</a>
+            <!-- Dropdown for People -->
+            <div class="group inline-block relative">
+                <a href="team.html" class="text-gray-700 hover:text-fuchsia-600">People</a>
+                <div class="absolute hidden group-hover:block shadow pt-4 pb-2 rounded-b w-max z-10">
+                    <a href="pi.html" class="block pl-4 pr-8 py-2 text-gray-700 hover:text-fuchsia-600">Principal Investigator</a>
+                    <a href="team.html" class="block pl-4 pr-8 py-2 text-gray-700 hover:text-fuchsia-600">Team</a>
                 </div>
             </div>
+        </nav>
+    </div>
+</header>
+`;
+
+const footerHTML = `
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6 lg:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Name of the Lab -->
+            <div>
+                <h2 class="text-lg font-semibold mb-2">DREAMRS Lab</h2>
+                <p class="text-sm text-gray-400">
+                    <a href="index.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Design Research and Human Factors Lab</a>
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="index.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Home</a></li>
+                    <li><a href="research.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Research</a></li>
+                    <li><a href="teaching.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Teaching</a></li>
+                    <li><a href="pi.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Principal Investigator</a></li>
+                    <li><a href="team.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Team</a></li>
+                </ul>
+            </div>
+            <!-- Contact Us -->
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                <ul class="space-y-2">
+                    <li class="text-sm text-gray-400">A-405, R&D Building, IIIT-Delhi R&D Building, Okhla Industrial Estate, New Delhi, India</li>
+                    <li class="text-sm text-gray-400">sonal.keshwani@iiitd.ac.in</li>
+                </ul>
+            </div>
+            <!-- Follow Us -->
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <!-- X (Twitter) -->
+                    <a href="#" class="text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                        </svg>
+                    </a>
+                    <!-- Google -->
+                    <a href="#" class="text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M21.35 11.1h-9.4v2.83h5.44c-.45 2.21-2.32 3.81-4.68 3.81a5.15 5.15 0 010-10.3c1.45 0 2.8.6 3.76 1.56l2.05-2.05A8.2 8.2 0 0012 3.92a8.08 8.08 0 00-8.14 8.08A8.08 8.08 0 0012 20.08c4.14 0 7.5-3.34 7.5-7.5 0-.5-.05-1-.15-1.48z"></path>
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" class="text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-400">
+            &copy; 2025 DREAMRS Lab. All rights reserved.
+        </div>
+    </div>
+</footer>
+`;
+
+document.body.insertAdjacentHTML('afterbegin', headerHTML);
+document.body.insertAdjacentHTML('beforeend', footerHTML);
+
+
+
+// Publications
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    const publicationsData = [
+        {
+            "Title": "Comparing novelty of designs from biological-inspiration with those from brainstorming",
+            "Author": "<strong>S Keshwani</strong>, TA Lenau, S Ahmed-Kristensen, A Chakrabarti",
+            "Journal": "Journal of Engineering Design 28 (10-12), 654-680",
+            "Cited_by": 54,
+            "Year": 2017,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:u5HHmVD_uO8C"
+        },
+        {
+            "Title": "Idea Inspire 3.0—A tool for analogical design",
+            "Author": "A Chakrabarti, L Siddharth, M Dinakar, M Panda, N Palegar, <strong>S Keshwani</strong>",
+            "Journal": "Research into Design for Communities, Volume 2: Proceedings of ICoRD 2017 …",
+            "Cited_by": 47,
+            "Year": 2017,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:2osOgNQ5qMEC"
+        },
+        {
+            "Title": "Biocards and Level of Abstraction",
+            "Author": "TA Lenau, <strong>S Keshwani</strong>, A Chakrabarti, S Ahmed-Kristensen",
+            "Journal": "20th International Conference on Engineering Design, Milan, Italy",
+            "Cited_by": 38,
+            "Year": 2015,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:9yKSN-GCB0IC"
+        },
+        {
+            "Title": "Towards automatic classification of description of analogies into SAPPhIRE constructs",
+            "Author": "<strong>S Keshwani</strong>, A Chakrabarti",
+            "Journal": "6th International Conference on Research into Design, Guwahati, India",
+            "Cited_by": 23,
+            "Year": 2017,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:W7OEmFMy1HYC"
+        },
+        {
+            "Title": "Influence of analogical domains and comprehensiveness in explanation of analogy on the novelty of designs",
+            "Author": "<strong>S Keshwani</strong>, A Chakrabarti",
+            "Journal": "Research in Engineering Design 28 (3), 381-412",
+            "Cited_by": 18,
+            "Year": 2017,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:IjCSPb-OGe4C"
+        },
+        {
+            "Title": "Benchmarking bio-inspired designs with brainstorming in terms of novelty of design outcomes",
+            "Author": "<strong>S Keshwani</strong>, TA Lenau, SA Kristensen, A Chakrabarti",
+            "Journal": "DS 75-7: Proceedings of the 19th International Conference on Engineering …",
+            "Cited_by": 18,
+            "Year": 2013,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UeHWp8X0CEIC"
+        },
+        {
+            "Title": "Detection and splitting of constructs of SAPPhIRE model to support automatic structuring of analogies",
+            "Author": "<strong>S Keshwani</strong>, A Chakrabarti",
+            "Journal": "DS 87-4 Proceedings of the 21st International Conference on Engineering …",
+            "Cited_by": 7,
+            "Year": 2017,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:4DMP91E08xMC"
+        },
+        {
+            "Title": "Influence of analogical domains and abstraction levels on novelty of designs",
+            "Author": "<strong>S Keshwani</strong>, A Chakrabarti",
+            "Journal": "DS79: Proceedings of The Third International Conference on Design Creativity …",
+            "Cited_by": 7,
+            "Year": 2015,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Extracting Information for Creating SAPPhIRE Model of Causality from Natural Language Descriptions",
+            "Author": "K Bhattacharya, AN Bhatt, BSC Ranjan, <strong>S Keshwani</strong>, V Srinivasan, ...",
+            "Journal": "",
+            "Cited_by": 6,
+            "Year": 2022,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UeHWp8X0CEIC"
+        },
+        {
+            "Title": "Supporting Designers in Generating Novel Ideas at the Conceptual Stage Using Analogies from the Biological Domain",
+            "Author": "<strong>S Keshwani</strong>",
+            "Journal": "Indian Institute of Science",
+            "Cited_by": 4,
+            "Year": 2018,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Conceptual Design in Metalworking Microenterprises: An Empirical Study in Tanzania",
+            "Author": "E Opiyo, S Jagtap, <strong>S Keshwani</strong>",
+            "Journal": "International Design Conference, 2493 - 2502",
+            "Cited_by": 3,
+            "Year": 2022,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Comparing Analogy-Based Methods—Bio-Inspiration and Engineering-Domain Inspiration for Domain Selection and Novelty",
+            "Author": "<strong>S Keshwani</strong>, H Casakin",
+            "Journal": "Biomimetics 9 (6), 344",
+            "Cited_by": 2,
+            "Year": 2024,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Conceptual Design in Informal Metalworking Microenterprises of Tanzania",
+            "Author": "E Opiyo, S Jagtap, <strong>S Keshwani</strong>",
+            "Journal": "Sustainability 15 (2), 986",
+            "Cited_by": 1,
+            "Year": 2023,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Developing a method for creating structured representations of working of systems from natural language descriptions using the SAPPhIRE model of causality",
+            "Author": "K Bhattacharya, A Majumder, AN Bhatt, <strong>S Keshwani</strong>, BSC Ranjan, ...",
+            "Journal": "AI EDAM 38, e24",
+            "Cited_by": "",
+            "Year": 2024,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Developing a Method for Creating Structured Representations of Working of Systems from Natural Language Descriptions using SAPPhIRE Model of Causality",
+            "Author": "CA Bhattacharya K, Majumder A, Bhatt A N, Keshwani S, Ranjan BSC, Srinivasan V.",
+            "Journal": "Artificial Intelligence in Engineering Design and Manufacturing (AI EDAM)",
+            "Cited_by": "",
+            "Year": 2024,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Analyzing patterns in bio-inspired patents to support transfer of biological inspiration",
+            "Author": "A Choudhari, <strong>S Keshwani</strong>",
+            "Journal": "",
+            "Cited_by": "",
+            "Year": 2023,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Studying the design process in constrained environment: an empirical approach to analyzing informal metal working enterprises in Tanzania",
+            "Author": "<strong>S Keshwani</strong>, S Jagtap, EZ Opiyo",
+            "Journal": "Proceedings of the Design Society 3, 3215-3224",
+            "Cited_by": "",
+            "Year": 2023,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        },
+        {
+            "Title": "Towards automatic generation of explanation of analogies at various levels of comprehensiveness",
+            "Author": "<strong>S Keshwani</strong>, A Chakrabarti",
+            "Journal": "Tools and Methods of Competitive Engineering",
+            "Cited_by": "",
+            "Year": 2020,
+            "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
+        }
+    ]
+
+    const publications = document.getElementById('publications');
+
+    publicationsData.forEach(item => {
+        const li = document.createElement('div');
+        // add class to li
+
+        li.innerHTML = `
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">${item.Year}</time>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white"><a rel="noopener" target="_blank" href="${item.Link}">${item.Title}</a></h3>
+            <p class="text-base font-normal text-gray-700 dark:text-gray-200">${item.Journal}</p>
+            <p class="text-base font-normal text-gray-600 dark:text-gray-400">${item.Author}</p>
         `;
 
-        teamContainer.appendChild(listItem);
+        publications.appendChild(li);
     });
+
+    // document.getElementById('readMoreBtn').addEventListener('click', () => {
+    //     publications.style.overflow = 'scroll';
+    //     document.getElementById('readMoreBtn').style.display = 'none';
+    // });
+
+
+
+// Research Talks
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    const researchTalksData = [
+        {
+            "date": "25 Jan 2021",
+            "title": "Technical University of Munich, Germany",
+            "link": "https://www.mw.tum.de/en/pd/start/",
+            "description": "Department of Mechanical Engineering, Product Development and Lightweight Design Laboratory. Title: Supporting designers creativity at the conceptual stage using biological inspiration, <strong>invited</strong>."
+        },  
+        {
+            "date": "16 May 2018",
+            "title": "Japan Advanced Institute of Science and Technology, Japan",
+            "link": "https://www.jaist.ac.jp/english/",
+            "description": "School of Knowledge Science. Title: Supporting designers in novel idea generation using analogies from the biological domain, <strong>invited</strong>."
+        },
+        {
+            "date": "28 January 2015",
+            "title": "Japan Advanced Institute of Science and Technology, Japan",
+            "link": "https://www.jaist.ac.jp/english/",
+            "description": "School of Knowledge Science. Title: Influence of Analogical Domains and Abstraction Levels on Novelty of Designs, <strong>invited</strong>."
+        },
+        {
+            "date": "24 August 2019",
+            "title": "Indian Institute of Technology, Guwahati",
+            "link": "https://www.iitg.ac.in/design/",
+            "description": "Department of Design. Title: Automatic classification of description of analogies into the constructs of SAPPhIRE model of causality."
+        },
+        {
+            "date": "20 July 2018",
+            "title": "Japan Advanced Institute of Science and Technology, Japan",
+            "link": "https://www.jaist.ac.jp/english/",
+            "description": "School of Knowledge Science. Title: Influence of personal creativity of designers on the selection of analogies and novelty of designs."
+        },
+        {
+            "date": "26 February 2018",
+            "title": "Indian Institute of Technology, Hyderabad",
+            "link": "https://design.iith.ac.in/",
+            "description": "Department of Design. Title: Supporting designers in novel idea generation using analogies from biological domain."
+        },
+        {
+            "date": "30 Jan 2018",
+            "title": "Indian Institute of Technology, Delhi",
+            "link": "https://design.iitd.ac.in/",
+            "description": "Department of Design. Title: Design by analogy method for generation of novel ideas."
+        }
+    ];
+
+    const researchTalks = document.getElementById('research-talks');
+
+    researchTalksData.forEach(talk => {
+        const li = document.createElement('div');
+
+        li.innerHTML = `
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">${talk.date}</time>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white"><a rel="noopener" target="_blank" href="${talk.link}">${talk.title}</a></h3>
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">${talk.description}</p>
+        `;
+
+        researchTalks.appendChild(li);
+    });
+
+
+
+// Research Collaborations
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    const collaborationsData = [
+        {
+            "name": "Prof. Gaetano Cascini",
+            "link": "https://mecc.polimi.it/en/research/faculty/prof-gaetano-cascini",
+            "position": "Full Professor",
+            "department": "Department of Mechanical Engineering, Politecnico di Milano, Milan, <strong>Italy</strong>",
+            "departmentLink": "https://www.mecc.polimi.it/en/"
+        },
+        {
+            "name": "Prof. Hernan Casakin",
+            "link": "https://scholar.google.co.il/citations?user=kr7wm4QAAAAJ&hl=iw",
+            "position": "Associate Professor",
+            "department": "Department of Architecture, Ariel University, <strong>Israel</strong>",
+            "departmentLink": "https://cris.ariel.ac.il/en/organisations/school-of-architecture-2"
+        },
+        {
+            "name": "Prof. Santosh Jagtap",
+            "link": "https://sites.google.com/view/santoshdesign/home",
+            "position": "Associate Professor",
+            "department": "Department of Design, <strong>IIT Guwahati</strong>, India",
+            "departmentLink": "https://www.iitg.ac.in/design/"
+        },
+        {
+            "name": "Prof. Amaresh Chakrabarti",
+            "link": "https://dm.iisc.ac.in/cpdm/facultyprofile.php?name=1",
+            "position": "Professor and Chair",
+            "department": "Centre for Product Design and Manufacturing, <strong>IISc Bangalore</strong>",
+            "departmentLink": "https://dm.iisc.ac.in/dm/"
+        },
+        {
+            "name": "Prof. E.Z. Opiyo",
+            "link": "https://scholar.google.com/citations?user=3SAp_hIAAAAJ&hl=en",
+            "position": "Professor",
+            "department": "St. Joseph University, Dar-es-salaam, <strong>Tanzania</strong>",
+            "departmentLink": "https://www.sjuit.ac.tz/"
+        },
+        {
+            "name": "Prof. Srinivasan Venkataraman",
+            "link": "",
+            "position": "Assistant Professor",
+            "department": "Department of Design, <strong>IIT Delhi</strong>, India",
+            "departmentLink": "https://www.iitg.ac.in/design/"
+        },
+        {
+            "name": "Prof. Torben Anker Lenau",
+            "link": "",
+            "position": "Associate Professor",
+            "department": "Technical University of Denmark, <strong>Denmark</strong>",
+            "departmentLink": "https://www.dtu.dk/english"
+        },
+        {
+            "name": "Prof. Saeema Ahmed-Kristensen",
+            "link": "",
+            "position": "Professor",
+            "department": "Design Engineering and Innovation, University of Exeter, <strong>England</strong>",
+            "departmentLink": "https://www.exeter.ac.uk/"
+        }
+    ];
+    
+    const collaborations = document.getElementById('research-collaborations');
+
+    collaborationsData.forEach(collab => {
+        const li = document.createElement('li');
+
+        li.innerHTML = `
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white"><a rel="noopener" target="_blank" href="${collab.link}">${collab.name}</a></h3>
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">${collab.position}, <a rel="noopener" target="_blank" href="${collab.departmentLink}">${collab.department}</a></p>
+        `;
+
+        collaborations.appendChild(li);
+    });
+
 });

@@ -5,7 +5,7 @@ const team = [
       name: "Dr Sonal Keshwani",
       title: "Principal Investigator",
       github: "",
-      linkedin: ""
+      linkedin: "https://www.linkedin.com/in/sonal-keshwani-5a2034322/"
     },
     {
       avatar: "images/PS1.png",
@@ -13,91 +13,105 @@ const team = [
       title: "PhD Scholar",
       subtitle: "(Shared project with Dr. Pragma Kar)",
       github: "",
-      linkedin: ""
+      linkedin: "https://www.linkedin.com/in/debadatta-sethy-7312b035/"
     },
     {
       avatar: "images/PS2.png",
       name: "Rhea S Shrivastava",
       title: "PhD Scholar",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/RheaS18",
+      linkedin: "http://www.linkedin.com/in/rhea-s-shrivastava-183344268"
     },
     {
       avatar: "images/s1.png",
       name: "Arbaaz Choudhari",
       title: "B.Tech Student",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/Arbaaz21034",
+      linkedin: "https://www.linkedin.com/in/arbaaz-choudhari-3a8346244/"
     },
     {
       avatar: "images/s2.png",
       name: "Yashila Arora",
       title: "B.Tech Student",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/yashila21436",
+      linkedin: "http://www.linkedin.com/in/yashila-arora-795936277"
     },
     {
       avatar: "images/s3.png",
       name: "Kanishk Kukreja",
       title: "B.Tech Student",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/kanishk393",
+      linkedin: "https://www.linkedin.com/in/kanishk-kukreja/"
     },
     {
       avatar: "images/s4.png",
       name: "Vishesh Sah",
       title: "B.Tech Student",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/Vish75",
+      linkedin: "https://www.linkedin.com/in/vishesh-sah-0556431ba/"
     },
     {
       avatar: "images/s5.png",
       name: "Hardik Singh",
       title: "B.Tech Student",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/hardik21390",
+      linkedin: "http://www.linkedin.com/in/hardik-singh-b48167235"
     },
     {
       avatar: "images/s6.png",
       name: "Pratham Kumar",
       title: "B.Tech Student",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/PratK5708",
+      linkedin: "https://www.linkedin.com/in/pratham-kumar/"
     },
     {
       avatar: "images/s7.png",
       name: "Vipul Raj",
       title: "B.Tech Student",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/vipul21435",
+      linkedin: "https://www.linkedin.com/in/vipul-raj-jha-491b2023a/"
     },
     {
       avatar: "images/s8.png",
       name: "Aman Sharma",
       title: "B.Tech Student",
-      github: "",
-      linkedin: ""
+      github: "https://github.com/aammaan",
+      linkedin: "https://www.linkedin.com/in/aman-sharrma/"
   },
   {
     avatar: "images/s9.png",
     name: "Mayank Kaim",
     title: "B.Tech Student",
-    github: "",
-    linkedin: ""
+    github: "https://github.com/Mayank20387",
+    linkedin: "https://www.linkedin.com/in/mayank-kaim-472b43242"
   },
   {
     avatar: "images/s10.png",
     name: "Neev Swarnakar",
     title: "B.Tech Student",
-    github: "",
-    linkedin: ""
+    github: "https://github.com/neev13",
+    linkedin: "https://in.linkedin.com/in/neev-swarnakar"
   },
   {
     avatar: "images/s11.png",
     name: "Jacqueline P Razafimiadana",
     title: "B.Tech Student",
-    github: "",
-    linkedin: ""
+    github: "https://github.com/Lilia2022",
+    linkedin: "https://www.linkedin.com/in/jacqueline-pr%C3%A9cilia-razafimiadana-ab8344249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    avatar: "images/s12.jpg",
+    name: "Komal",
+    title: "B.Tech Student",
+    github: "https://github.com/kd-456",
+    linkedin: "https://www.linkedin.com/in/komal-736601258/"
+  },
+  {
+    avatar: "images/s13.png",
+    name: "Aditi Sharma",
+    title: "B.Tech Student",
+    github: "https://github.com/Aditi1409sharma",
+    linkedin: "https://www.linkedin.com/in/aditi-sharma-as/"
   },
 ];
 

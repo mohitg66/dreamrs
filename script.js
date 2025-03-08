@@ -4,28 +4,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     const headerHTML = `
-    <header class="fixed w-full bg-gradient-to-b from-gray-400 to-transparent dark:from-gray-700 top-0 z-20 px-6 lg:px-44">
-        <div class="container mx-auto py-4 flex items-center justify-between">
+    <header id="main-header" class="fixed w-full bg-transparent top-0 z-20 px-6 lg:px-44 transition-colors duration-300">
+        <div class="container mx-auto py-2 md:py-3 flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-            <a href="index.html">
-                <img src="logo.png" alt="DREAMRS Lab Logo" class="h-14">
-                <!-- <span class="text-xl font-bold text-gray-900">DREAMRS Lab</span> -->
-            </a>
+                <a href="index.html">
+                    <img src="logo.png" alt="DREAMRS Lab Logo" class="h-14">
+                </a>
             </div>
             <!-- Navbar -->
-            <nav class="flex gap-x-6 relative text-lg drop-shadow-[0_0px_12px_rgba(255,255,255,0.4)]">
-                <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Home</a>
+            <nav class="hidden md:flex gap-x-6 relative text-lg drop-shadow-[0_0px_12px_rgba(255,255,255,0.4)]">
+                <a href="index.html" class="drop-shadow-xl text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Home</a>
                 <a href="research.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
                 <a href="teaching.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
                 <!-- Dropdown for People -->
                 <div class="group inline-block relative">
-                    <a href="team.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">People</a>
-                    <div class="absolute hidden group-hover:block shadow pt-4 pb-2 rounded-b w-max z-10">
+                    <a href="#" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">People</a>
+                    <div id="People-Group" class="absolute hidden group-hover:block shadow pt-4 pb-2 rounded-b w-max z-10 dark:bg-gray-800">
                         <a href="pi.html" class="block pl-4 pr-8 py-2 text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
                         <a href="team.html" class="block pl-4 pr-8 py-2 text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
                     </div>
                 </div>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-200 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 pt-2 bg-transparent shadow-lg dark:bg-gray-800">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
+                <a href="teaching.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
+                <a href="pi.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
+                <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
             </nav>
         </div>
     </header>
@@ -94,9 +110,51 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </footer>
     `;
+
+    
     
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
     document.body.insertAdjacentHTML('beforeend', footerHTML);
+
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Change header background on scroll
+    const header = document.querySelector('header');
+    const heroSection = document.getElementById('Hero');
+    const peopleGroup = document.getElementById('People-Group');
+
+    if (heroSection) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > heroSection.offsetHeight - header.offsetHeight) {
+                header.classList.remove('bg-transparent', 'shadow');
+                header.classList.add('bg-gray-50', 'shadow');
+                mobileMenu.classList.remove('bg-transparent');
+                mobileMenu.classList.add('bg-gray-50');
+                peopleGroup.classList.remove('dark:bg-gray-800');
+                peopleGroup.classList.add('bg-gray-50');
+            } else {
+                header.classList.remove('bg-gray-50', 'shadow');
+                header.classList.add('bg-transparent');
+                mobileMenu.classList.remove('bg-gray-50');
+                mobileMenu.classList.add('bg-transparent');
+                peopleGroup.classList.remove('bg-gray-50');
+                peopleGroup.classList.add('dark:bg-gray-800');
+            }
+        });
+    } else {
+        header.classList.remove('bg-transparent', 'shadow');
+        header.classList.add('bg-gray-50', 'shadow');
+        mobileMenu.classList.remove('bg-transparent');
+        mobileMenu.classList.add('bg-gray-50');
+        peopleGroup.classList.remove('dark:bg-gray-800');
+        peopleGroup.classList.add('bg-gray-50');
+    }
     
     
     

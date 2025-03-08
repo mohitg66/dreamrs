@@ -11,14 +11,14 @@ const team = [
       avatar: "images/PS1.png",
       name: "Debadatta Sethy",
       title: "PhD Scholar",
-      subtitle: "(Shared project with Dr. Pragma Kar)",
-      github: "",
+      subtitle: "Shared project with Dr. Pragma Kar",
       linkedin: "https://www.linkedin.com/in/debadatta-sethy-7312b035/"
     },
     {
       avatar: "images/PS2.png",
       name: "Rhea S Shrivastava",
       title: "PhD Scholar",
+      subtitle: "Under Dr. Sonal Keshwani",
       github: "https://github.com/RheaS18",
       linkedin: "http://www.linkedin.com/in/rhea-s-shrivastava-183344268"
     },
@@ -127,10 +127,10 @@ team.forEach(member => {
             </div>
             <div class="mt-3 text-center">
                 <h4 class="text-lg text-gray-700 dark:text-gray-400 font-semibold">${member.name}</h4>
+                ${member.subtitle ? `<p class="text-gray-500 mt-1">${member.subtitle}</p>` : ''}
                 <p class="text-gray-500">${member.title}</p>
-                ${member.subtitle ? `<p class="text-gray-500 text-sm mt-1">${member.subtitle}</p>` : ''}
                 <div class="mt-2 flex gap-4 text-gray-400 items-center justify-center">
-                    <a href="${member.github}" aria-label="GitHub">
+                    <a href="${member.github}" aria-label="GitHub" class="${member.github ? '' : 'pointer-events-none'}">
                       <svg
                         class="w-5 h-5 duration-150 hover:text-gray-500"
                         fill="currentColor"

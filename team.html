@@ -6,22 +6,25 @@
     <title>Team | DREAMRS Lab</title>
     <link rel="icon" href="images/logo.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="styles.css"> Optional CSS -->
-    <!-- <link href="./output.css" rel="stylesheet"> -->
 </head>
-<body>
+<body class="bg-gray-50 dark:bg-gray-900">
 
     <section id="Team" class="py-14 pt-28 bg-gray-50 dark:bg-gray-900">
-    <div class="max-w-screen-xl mx-auto px-4 md:px-8">
-        <div class="max-w-xl mx-auto sm:text-center">
-        <h3 class="text-gray-800 dark:text-white text-3xl font-semibold sm:text-4xl">Our <span class="text-fuchsia-500">Team</span></h3>
+        <div class="max-w-screen-xl mx-auto px-4 md:px-8">
+            <!-- Heading -->
+            <div class="text-center">
+                <h3 class="text-gray-800 dark:text-white text-3xl font-medium sm:text-4xl">
+                    Our <span class="text-fuchsia-500">Team</span>
+                </h3>
+            </div>
+
+            <!-- Team Members Grid -->
+            <div class="mt-12">
+                <ul id="team-container" class="gap-x-14 gap-y-10 flex flex-wrap justify-center">
+                    <!-- Team members will be injected here -->
+                </ul>
+            </div>
         </div>
-        <div class="mt-12">
-        <ul id="team-container" class="gap-x-14 gap-y-10 flex flex-wrap justify-center">
-            <!-- Team members will be injected here -->
-        </ul>
-        </div>
-    </div>
     </section>
 
     <script src="script.js"></script>

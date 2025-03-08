@@ -51,15 +51,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const footerHTML = `
     <footer class="bg-gray-900 dark:border-t dark:border-gray-700 text-white py-8">
-        <div class="container mx-auto px-6 lg:px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Name of the Lab -->
-                <div>
-                    <h2 class="text-lg font-semibold mb-2">DREAMRS Lab</h2>
-                    <p class="text-sm text-gray-400">
-                        <a href="index.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Design Research and Human Factors Lab</a>
-                    </p>
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Logos: IIIT Delhi and DREAMRS Lab -->
+                <div class="flex flex-col items-center md:items-start space-y-6">
+                    <!-- IIIT Delhi Logo -->
+                    <img src="images/iiitdlogo.png" alt="IIIT Delhi Logo" class="h-24 w-auto">
+                    <!-- DREAMRS Lab Logo (Smaller) -->
+                    <img src="images/logo2.png" alt="DREAMRS Lab Logo" class="h-16 w-auto">
                 </div>
+
                 <!-- Quick Links -->
                 <div>
                     <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
@@ -71,32 +72,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="team.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Team</a></li>
                     </ul>
                 </div>
+
                 <!-- Contact Us -->
                 <div>
                     <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
                     <ul class="space-y-2">
                         <li class="text-sm text-gray-400">A-405, R&D Building, IIIT-Delhi R&D Building, Okhla Industrial Estate, New Delhi, India</li>
                         <li class="text-sm text-gray-400">sonal.keshwani@iiitd.ac.in</li>
+                        <li class="text-sm text-gray-400">dreamrslab@iiitd.ac.in</li>
                     </ul>
                 </div>
+
                 <!-- Follow Us -->
                 <div>
                     <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <!-- X (Twitter) -->
-                        <a href="#" class="text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                            </svg>
-                        </a>
-                        <!-- Google -->
-                        <a href="#" class="text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">
+                        <!-- Google Scholar -->
+                        <a href="https://scholar.google.co.in/citations?user=NLPFhkMAAAAJ&hl=en" class="text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">
                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M21.35 11.1h-9.4v2.83h5.44c-.45 2.21-2.32 3.81-4.68 3.81a5.15 5.15 0 010-10.3c1.45 0 2.8.6 3.76 1.56l2.05-2.05A8.2 8.2 0 0012 3.92a8.08 8.08 0 00-8.14 8.08A8.08 8.08 0 0012 20.08c4.14 0 7.5-3.34 7.5-7.5 0-.5-.05-1-.15-1.48z"></path>
                             </svg>
                         </a>
                         <!-- LinkedIn -->
-                        <a href="#" class="text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">
+                        <a href="https://www.linkedin.com/in/sonal-keshwani-5a2034322/" class="text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
                             </svg>
@@ -104,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             </div>
-    
+
             <!-- Copyright -->
             <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-400">
                 &copy; 2025 DREAMRS Lab. All rights reserved.

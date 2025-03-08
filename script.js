@@ -17,14 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="index.html" class="drop-shadow-xl text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Home</a>
                 <a href="research.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
                 <a href="teaching.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
+                <a href="team.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
+                <a href="pi.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
                 <!-- Dropdown for People -->
-                <div class="group inline-block relative">
+                <!-- <div class="group inline-block relative">
                     <a href="#" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">People</a>
-                    <div id="People-Group" class="absolute hidden group-hover:block shadow pt-4 pb-2 rounded-b w-max z-10 dark:bg-gray-800">
+                    <div id="People-Group" class="absolute hidden group-hover:block pt-4 pb-2 shadow-sm rounded-b w-max z-10 bg-transparent">
                         <a href="pi.html" class="block pl-4 pr-8 py-2 text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
                         <a href="team.html" class="block pl-4 pr-8 py-2 text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
                     </div>
-                </div>
+                </div>  -->
             </nav>
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
@@ -36,12 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 pt-2 bg-transparent shadow-lg dark:bg-gray-800">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 pt-2 bg-transparent shadow-lg">
             <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
                 <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
                 <a href="teaching.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
-                <a href="pi.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
                 <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
+                <a href="pi.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
             </nav>
         </div>
     </header>
@@ -127,33 +129,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // Change header background on scroll
     const header = document.querySelector('header');
     const heroSection = document.getElementById('Hero');
-    const peopleGroup = document.getElementById('People-Group');
+    // const peopleGroup = document.getElementById('People-Group');
 
     if (heroSection) {
         window.addEventListener('scroll', function() {
             if (window.scrollY > heroSection.offsetHeight - header.offsetHeight) {
                 header.classList.remove('bg-transparent', 'shadow');
-                header.classList.add('bg-gray-50', 'shadow');
+                header.classList.add('bg-gray-50', 'dark:bg-gray-800', 'shadow');
                 mobileMenu.classList.remove('bg-transparent');
-                mobileMenu.classList.add('bg-gray-50');
-                peopleGroup.classList.remove('dark:bg-gray-800');
-                peopleGroup.classList.add('bg-gray-50');
+                mobileMenu.classList.add('bg-gray-50', 'dark:bg-gray-800');
+                // peopleGroup.classList.remove('bg-transparent');
+                // peopleGroup.classList.add('bg-gray-50', 'dark:bg-gray-800');
             } else {
-                header.classList.remove('bg-gray-50', 'shadow');
+                header.classList.remove('bg-gray-50', 'dark:bg-gray-800', 'shadow');
                 header.classList.add('bg-transparent');
-                mobileMenu.classList.remove('bg-gray-50');
+                mobileMenu.classList.remove('bg-gray-50', 'dark:bg-gray-800');
                 mobileMenu.classList.add('bg-transparent');
-                peopleGroup.classList.remove('bg-gray-50');
-                peopleGroup.classList.add('dark:bg-gray-800');
+                // peopleGroup.classList.remove('bg-gray-50', 'dark:bg-gray-800');
+                // peopleGroup.classList.add('bg-transparent');
             }
         });
     } else {
         header.classList.remove('bg-transparent', 'shadow');
-        header.classList.add('bg-gray-50', 'shadow');
+        header.classList.add('bg-gray-50', 'dark:bg-gray-800', 'shadow');
         mobileMenu.classList.remove('bg-transparent');
-        mobileMenu.classList.add('bg-gray-50');
-        peopleGroup.classList.remove('dark:bg-gray-800');
-        peopleGroup.classList.add('bg-gray-50');
+        mobileMenu.classList.add('bg-gray-50', 'dark:bg-gray-800');
+        // peopleGroup.classList.remove('bg-transparent');
+        // peopleGroup.classList.add('bg-gray-50', 'dark:bg-gray-800');
     }
     
     

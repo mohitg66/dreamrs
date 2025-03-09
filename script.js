@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 "name": "Prof. Srinivasan Venkataraman",
-                "link": "ttps://sites.google.com/view/srinivasan-aboutme/home",
+                "link": "https://sites.google.com/view/srinivasan-aboutme/home",
                 "position": "Assistant Professor",
                 "department": "Department of Design, <strong>IIT Delhi</strong>, India",
                 "departmentLink": "https://www.iitg.ac.in/design/"

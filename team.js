@@ -140,7 +140,7 @@ const team = [
     title: "B.Tech Student",
     subtitle:"Independent Project",
     github: "https://github.com/mohitg66",
-    linkedin: "https://www.linkedin.com/in/mohitg66/?originalSubdomain=in"
+    linkedin: "https://www.linkedin.com/in/mohitg66"
   }
 ];
 

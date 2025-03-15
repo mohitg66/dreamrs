@@ -125,6 +125,22 @@ const team = [
     subtitle:"Independent Project",
     github: "https://github.com/Lilia2022",
     linkedin: "https://www.linkedin.com/in/jacqueline-pr%C3%A9cilia-razafimiadana-ab8344249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    avatar: "images/s14.jpeg",
+    name: "Ayush Melty",
+    title: "B.Tech Student",
+    subtitle:"Independent Project",
+    github: "https://github.com/AyushMelty",
+    linkedin: "https://www.linkedin.com/in/ayush-melty-01831a272/"
+  },
+  {
+    avatar: "images/s15.jpeg",
+    name: "Mohit Gupta",
+    title: "B.Tech Student",
+    subtitle:"Independent Project",
+    github: "https://github.com/mohitg66",
+    linkedin: "https://www.linkedin.com/in/mohitg66/?originalSubdomain=in"
   }
 ];
 

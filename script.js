@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <!-- Navbar -->
             <nav class="hidden md:flex gap-x-6 relative text-lg drop-shadow-[0_0px_12px_rgba(255,255,255,0.4)]">
-                <a href="index.html" class="drop-shadow-xl text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Home</a>
                 <a href="research.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
                 <a href="teaching.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
                 <a href="team.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
@@ -38,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 pt-2 bg-transparent shadow-lg">
-            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 bg-transparent shadow-lg">
+            <nav class="p-2 space-y-1 sm:px-3">
                 <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
                 <a href="teaching.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
                 <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
@@ -51,14 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const footerHTML = `
     <footer class="bg-gray-900 dark:border-t dark:border-gray-700 text-white py-8">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="divide-y-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-44">
                 <!-- Logos: IIIT Delhi and DREAMRS Lab -->
                 <div class="flex flex-col items-center md:items-start space-y-6">
                     <!-- IIIT Delhi Logo -->
-                    <img src="images/iiitdlogo.png" alt="IIIT Delhi Logo" class="h-24 w-auto">
+                    <img src="images/iiitdlogo.png" alt="IIIT Delhi Logo" class="w-72 rounded-sm">
                     <!-- DREAMRS Lab Logo (Smaller) -->
-                    <img src="images/logo2.png" alt="DREAMRS Lab Logo" class="h-16 w-auto">
+                    <img src="images/logo2.png" alt="DREAMRS Lab Logo" class="w-72 rounded-sm">
                 </div>
 
                 <!-- Quick Links -->

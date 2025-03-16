@@ -10,7 +10,7 @@
 </head>
 <body class="bg-gray-100 dark:bg-gray-900">
 
-    <section id="Courses" class="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-24 xl:px-44 pt-28 pb-[56px] bg-gray-100 dark:bg-gray-900">
+    <section id="Courses" class="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 xl:px-44 pt-28 pb-[56px] bg-gray-100 dark:bg-gray-900">
         <div class="container mx-auto">
             <!-- Heading -->
             <h1 class="text-center text-3xl md:text-4xl font-medium text-gray-800 dark:text-white">
@@ -98,7 +98,7 @@
             },
             {
                 code: "DES524",
-                title: "Ergonomics/ Human Factors for Design",
+                title: "Ergonomics / Human Factors for Design",
                 description: "In designing, ergonomics takes care of the users' need, their limitations and abilities. Various aspects of basic anthropometry, physical, physiological, psychological and biomechanical limitations and abilities of the human body with reference to human centred design of products and systems will be explained. Students will: a) learn the principles, overview and background of ergonomics; b) develop the skill to identify the user friendly man machine environment system; and c) understand the methods and processes to evaluate the products, facilities, environment, jobs and tasks. This course will help in finding real time solutions to improve the quality of life and performance of an individual. ",
                 link: "https://techtree.iiitd.edu.in/viewDescription/filename?=DES524"
             },
@@ -118,13 +118,12 @@
             courseCard.target = "_blank";
             courseCard.rel = "noopener";
             courseCard.className = "course-card group flex items-center md:h-96 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300";
-            let descriptionTextSize = course.description.length > 400 ? 'text-sm' : 'text-base';
 
             courseCard.innerHTML = `
                 <div class="p-6">
                     <h3 class="course-title text-xl sm:text-2xl text-center font-semibold text-gray-800 dark:text-gray-50 group-hover:hidden">${course.code}</h3>   
                     <p class="course-subtitle mt-2 text-lg sm:text-xl text-center text-gray-600 dark:text-gray-400 group-hover:hidden">${course.title}</p>
-                    <p class="course-description mt-3 ${descriptionTextSize} text-gray-500 dark:text-gray-300 hidden group-hover:block group-hover:text-center">
+                    <p class="course-description mt-3 text-[0.75vw] text-gray-500 dark:text-gray-300 hidden group-hover:block group-hover:text-center">
                         ${course.description}
                     </p>
                 </div>

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- Logo -->
             <div class="flex items-center space-x-2">
                 <a href="index.html">
-                    <img src="logo.png" alt="DREAMRS Lab Logo" class="h-14">
+                    <img src="images/logo.png" alt="DREAMRS Lab Logo" class="h-14">
                 </a>
             </div>
             <!-- Navbar -->

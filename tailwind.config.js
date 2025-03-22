@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'selector',
     content: ["./**/*.{html,js}"],
     theme: {
       extend: {
@@ -9,7 +10,6 @@ module.exports = {
           emerald: '#008000'
         }
       },
-    },
-    darkMode: 'false',
+    },  
     plugins: [],
   }

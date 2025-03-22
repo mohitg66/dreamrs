@@ -152,7 +152,7 @@ team.forEach(member => {
     listItem.innerHTML = `
         <div class="hover:cursor-default">
             <div class="w-60 h-60 shadow rounded-xl">
-                <img src="${member.avatar}" class="w-full h-full object-cover object-center shadow-md rounded-xl" alt="${member.name}" />
+                <img src="${member.avatar}" class="w-full h-full object-cover object-center shadow-md rounded-xl content-center text-center" alt="${member.name}" />
             </div>
             <div class="mt-3 text-center">
                 <h4 class="text-lg text-gray-700 dark:text-gray-400 font-semibold">${member.name}</h4>

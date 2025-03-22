@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <!-- Navbar -->
             <nav class="hidden md:flex gap-x-6 relative text-lg drop-shadow-[0_0px_12px_rgba(255,255,255,0.4)]">
+                <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Home</a>
                 <a href="research.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
                 <a href="teaching.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
                 <a href="team.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 bg-transparent shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 bg-gray-50 dark:bg-gray-800 bg-opacity-80 shadow-lg">
             <nav class="p-2 space-y-1 sm:px-3">
                 <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Research</a>
                 <a href="teaching.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
@@ -133,15 +134,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.scrollY > heroSection.offsetHeight - header.offsetHeight) {
                 header.classList.remove('bg-transparent', 'shadow');
                 header.classList.add('bg-gray-50', 'dark:bg-gray-800', 'shadow');
-                mobileMenu.classList.remove('bg-transparent');
-                mobileMenu.classList.add('bg-gray-50', 'dark:bg-gray-800');
+                mobileMenu.classList.remove('bg-opacity-80');
+                // mobileMenu.classList.add('bg-gray-50', 'dark:bg-gray-800');
                 // peopleGroup.classList.remove('bg-transparent');
                 // peopleGroup.classList.add('bg-gray-50', 'dark:bg-gray-800');
             } else {
                 header.classList.remove('bg-gray-50', 'dark:bg-gray-800', 'shadow');
                 header.classList.add('bg-transparent');
-                mobileMenu.classList.remove('bg-gray-50', 'dark:bg-gray-800');
-                mobileMenu.classList.add('bg-transparent');
+                // mobileMenu.classList.remove('bg-gray-50', 'dark:bg-gray-800');
+                mobileMenu.classList.add('bg-opacity-80');
                 // peopleGroup.classList.remove('bg-gray-50', 'dark:bg-gray-800');
                 // peopleGroup.classList.add('bg-transparent');
             }
@@ -149,8 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         header.classList.remove('bg-transparent', 'shadow');
         header.classList.add('bg-gray-50', 'dark:bg-gray-800', 'shadow');
-        mobileMenu.classList.remove('bg-transparent');
-        mobileMenu.classList.add('bg-gray-50', 'dark:bg-gray-800');
+        mobileMenu.classList.remove('bg-opacity-80');
+        // mobileMenu.classList.add('bg-gray-50', 'dark:bg-gray-800');  
         // peopleGroup.classList.remove('bg-transparent');
         // peopleGroup.classList.add('bg-gray-50', 'dark:bg-gray-800');
     }

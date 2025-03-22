@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     const headerHTML = `
-    <header id="main-header" class="fixed w-full bg-transparent top-0 z-20 px-6 lg:px-44 transition-colors duration-300">
+    <header script="localStorage.theme = 'light'" id="main-header" class="fixed w-full bg-transparent top-0 z-20 px-6 lg:px-44 transition-colors duration-300">
         <div class="container mx-auto py-2 md:py-3 flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- Logos: IIIT Delhi and DREAMRS Lab -->
                 <div class="flex flex-col items-center md:items-start space-y-6">
                     <!-- IIIT Delhi Logo -->
-                    <img src="images/iiitdlogo.png" alt="IIIT Delhi Logo" class="w-72 rounded-sm">
+                    <img src="images/iiitdlogo2.png" alt="IIIT Delhi Logo" class="w-72 rounded-sm">
                     <!-- DREAMRS Lab Logo (Smaller) -->
                     <img src="images/logo2.png" alt="DREAMRS Lab Logo" class="w-72 rounded-sm">
                 </div>

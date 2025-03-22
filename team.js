@@ -31,22 +31,6 @@ const team = [
       linkedin: "https://www.linkedin.com/in/arbaaz-choudhari-3a8346244/"
     },
     {
-      avatar: "images/s2.png",
-      name: "Yashila Arora",
-      title: "B.Tech Student",
-      subtitle:"B.Tech Project",
-      github: "https://github.com/yashila21436",
-      linkedin: "http://www.linkedin.com/in/yashila-arora-795936277"
-    },
-    {
-      avatar: "images/s3.png",
-      name: "Kanishk Kukreja",
-      title: "B.Tech Student",
-      subtitle:"B.Tech Project",
-      github: "https://github.com/kanishk393",
-      linkedin: "https://www.linkedin.com/in/kanishk-kukreja/"
-    },
-    {
       avatar: "images/s4.png",
       name: "Vishesh Sah",
       title: "B.Tech Student",
@@ -109,6 +93,22 @@ const team = [
     subtitle:"Independent Project",
     github: "https://github.com/Mayank20387",
     linkedin: "https://www.linkedin.com/in/mayank-kaim-472b43242"
+  },
+  {
+    avatar: "images/s2.png",
+    name: "Yashila Arora",
+    title: "B.Tech Student",
+    subtitle:"Independent Project",
+    github: "https://github.com/yashila21436",
+    linkedin: "http://www.linkedin.com/in/yashila-arora-795936277"
+  },
+  {
+    avatar: "images/s3.png",
+    name: "Kanishk Kukreja",
+    title: "B.Tech Student",
+    subtitle:"Independent Project",
+    github: "https://github.com/kanishk393",
+    linkedin: "https://www.linkedin.com/in/kanishk-kukreja/"
   },
   {
     avatar: "images/s10.png",

@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     const headerHTML = `
-    <header script="localStorage.theme = 'light'" id="main-header" class="fixed w-full bg-transparent top-0 z-20 px-6 lg:px-44 transition-colors duration-300">
+    <header id="main-header" class="fixed w-full bg-transparent top-0 z-20 px-6 lg:px-44 transition-colors duration-300">
         <div class="container mx-auto py-2 md:py-3 flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="DREAMRS Lab Logo" class="h-14">
+                    <img src="images/nlogo.png" alt="DREAMRS Lab Logo" class="h-14">
                 </a>
             </div>
             <!-- Navbar -->
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <!-- IIIT Delhi Logo -->
                     <img src="images/iiitdlogo2.png" alt="IIIT Delhi Logo" class="w-72 rounded-sm">
                     <!-- DREAMRS Lab Logo (Smaller) -->
-                    <img src="images/logo2.png" alt="DREAMRS Lab Logo" class="w-72 rounded-sm">
+                    <img src="images/nlogo2.png" alt="DREAMRS Lab Logo" class="w-72 rounded-sm">
                 </div>
 
                 <!-- Quick Links -->

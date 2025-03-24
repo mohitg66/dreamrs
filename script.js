@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- Logo -->
             <div class="flex items-center space-x-2">
                 <a href="index.html">
-                    <img src="images/nlogo.png" alt="DREAMRS Lab Logo" class="h-14">
+                    <img src="images/nnlogo.png" alt="DREAMRS Lab Logo" class="h-14">
                 </a>
             </div>
             <!-- Navbar -->
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <!-- IIIT Delhi Logo -->
                     <img src="images/iiitdlogo2.png" alt="IIIT Delhi Logo" class="w-72 rounded-sm">
                     <!-- DREAMRS Lab Logo (Smaller) -->
-                    <img src="images/nlogo2.png" alt="DREAMRS Lab Logo" class="w-72 rounded-sm">
+                    <img src="images/nnlogo2.png" alt="DREAMRS Lab Logo" class="w-72 rounded-sm">
                 </div>
 
                 <!-- Quick Links -->

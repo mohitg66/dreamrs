@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     const headerHTML = `
-    <header id="main-header" class="fixed w-full bg-transparent top-0 z-20 px-6 lg:px-44 transition-colors duration-300">
+    <header id="main-header" class="fixed w-full bg-transparent top-0 z-20 px-6 transition-colors duration-300">
         <div class="container mx-auto py-2 md:py-3 flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center space-x-2">

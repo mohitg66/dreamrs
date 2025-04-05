@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const footerHTML = `
     <footer class="bg-gray-900 dark:border-t dark:border-gray-700 text-white py-8">
-        <div class="divide-y-2">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-44">
+        <div class="divide-y-2 px-6">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <!-- Logos: IIIT Delhi and DREAMRS Lab -->
                 <div class="flex flex-col items-center md:items-start space-y-6">
                     <!-- IIIT Delhi Logo -->
@@ -194,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Year": 2017,
                 "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:u5HHmVD_uO8C"
             },
+        ]
             // {
             //     "Title": "Idea Inspire 3.0—A tool for analogical design",
             //     "Author": "A Chakrabarti, L Siddharth, M Dinakar, M Panda, N Palegar, <strong>S Keshwani</strong>",
@@ -306,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
             //     "Year": 2020,
             //     "Link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=NLPFhkMAAAAJ&citation_for_view=NLPFhkMAAAAJ:UebtZRa9Y70C"
             // }
-        ]
+        // ]
     
         const publications = document.getElementById('publications');
     

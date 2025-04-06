@@ -8,13 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         linkedin: "https://www.linkedin.com/in/sonal-keshwani-5a2034322/"
       },
       {
-        avatar: "images/PS1.png",
-        name: "Debadatta Sethy",
-        title: "PhD Scholar",
-        subtitle: "Shared project with Dr. Pragma Kar",
-        linkedin: "https://www.linkedin.com/in/debadatta-sethy-7312b035/"
-      },
-      {
         avatar: "images/PS2.png",
         name: "Rhea S Shrivastava",
         title: "PhD Scholar",

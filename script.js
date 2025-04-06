@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="teaching.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
                 <a href="team.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
                 <a href="pi.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
+                <a href="openings.html" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Openings</a>
                 <!-- Dropdown for People -->
                 <!-- <div class="group inline-block relative">
                     <a href="#" class="text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">People</a>
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="teaching.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Teaching</a>
                 <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Team</a>
                 <a href="pi.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Principal Investigator</a>
+                <a href="openings.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-fuchsia-600">Openings</a>
             </nav>
         </div>
     </header>
@@ -69,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="teaching.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Teaching</a></li>
                         <li><a href="pi.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Principal Investigator</a></li>
                         <li><a href="team.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Team</a></li>
+                        <li><a href="openings.html" class="text-sm text-gray-400 hover:text-fuchsia-500 transition-colors duration-300">Openings</a></li>
                     </ul>
                 </div>
 
